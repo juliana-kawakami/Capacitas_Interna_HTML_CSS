@@ -1,0 +1,361 @@
+* {
+    /* reseta tudo, nao entendi direito */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    /* tira risquinheo embaixo */
+    text-decoration: none;
+    /* pega a cor do elemento acima dele , o body está la emcima do a entao pega a cor do body que é a cor q deixamos coo padrão*/
+    color: inherit; 
+
+}
+
+html {
+    /* vai colocar Inter como fonte Inter, se der ruim, vai colocar qualquer fonte sem serifa */
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFDF9;
+    color: #200d0d
+}
+
+header{
+    /* border: 1px solid red; */
+    padding: 40px 0 20px 0;
+    box-shadow: 0px -5px 10px 0px rgba(32, 13, 13, 0.25);
+    /* pra ficar preso la em cima enquanto escrola */
+    position: fixed;
+    width: 100%;
+    /* fundo fica transparente, tem q forçar a colocar o background color dnv */
+    background-color: #FFFDF9;
+    /* quao pra cima do resto ele vai estar, tem q por um numero grandão pra nao dar ruim dps*/
+    z-index: 2024;
+    
+}
+
+header nav ul{
+    display: flex;
+    gap: 24px;
+    /* como já tem o flex, da pra justificar pro centro. esse justify contet por padrão é no start, existe o end também */
+    justify-content: center;
+    /* align itens serve pra qnd tem tamanhos diferentes cada um dos items */
+    /* border: 1px solid blue; */
+}
+
+li{
+    /* tira o estilo da lista, tira as bolinhas */
+    list-style: none;
+}
+
+header nav ul li .ph-asterisk {
+    /* a tag i age como se fosse um texto, então colocamos como font-size para mudar seu tamanho */
+    font-size: 20px;
+}
+
+p {
+    line-height: 160%;
+}
+
+main{
+    max-width: 1080px;
+    padding-top: 120px;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+main #s-hero{
+    max-width: 630px;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+}
+
+main #s-hero #Hero .Text .title {
+    padding-bottom: 24px;
+}
+main #s-hero #Hero .Text .title h1 {
+    font-family: "DM Serif Text", sans-serif;
+    font-size: 48px;
+    padding-top: 48px;
+}
+
+main #s-hero #Hero .Text p{
+    display: flex;
+    font-size: 16px;
+    /* padding-top: 24px; */
+}
+
+main #s-hero #Hero .Text .title p {
+    font-family: "DM Serif Text", sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+main #s-hero #Hero .Text{
+    padding-bottom: 48px;
+}
+
+main #s-hero #Hero button {
+    font-family: "DM Serif Text", sans-serif;
+    font-size: 16px;
+    color: #FFFDF9;
+    background-color: #200d0d;
+    border-color: #200d0d;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+
+
+#bordas{
+    padding-top: 56px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#bordas .borda1{
+    height: 1px;
+    width: 80%;
+    background-color: #200d0d;
+}
+
+#bordas .borda2{
+    height: 1px;
+    width: 100%;
+    background-color: #200d0d;
+}
+
+main section{
+    padding-top: 160px;
+    width: 100%;
+}
+
+main #departamento .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 32px;
+}
+
+main #departamento .top span {
+    font-family: "DM Serif Text", sans-serif;
+    font-style: italic;
+    
+}
+
+h2{
+    font-family: "DM Serif Text", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+main #departamento .content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main #departamento .content p {
+    max-width: 440px;
+}
+
+main #departamento .content .imagens {
+    display: flex;
+    gap: 16px;
+}
+
+main #departamento .content .imagens .coluna-imagens{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+main #entidades > .Text{
+    position: sticky;
+    top: 120px;
+}
+
+main #entidades .Text .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 32px;
+}
+
+main #entidades .Text .top .conjBolinha{
+    display: flex;
+    gap: 4px;
+}
+
+main #entidades .Text .top .conjBolinha .bolinha{
+    width: 8px;
+    height: 8px;
+    background-color: #200d0d;
+    border-radius: 999px;
+}
+
+
+main #entidades .Cards .CardSection{
+    padding-top: 120px;
+    position: sticky;
+    top: 0;
+}
+
+main #entidades .Cards .CardSection .Card{
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 64px;
+}
+
+main #entidades .Cards .CardSection .Card.PET{
+    background-color: #EBF4FB;
+}
+main #entidades .Cards .CardSection .Card.CACCOM{
+    background-color: #FFF2F2;
+}
+main #entidades .Cards .CardSection .Card.CAINFO{
+    background-color: #F5F5F5;
+}
+main #entidades .Cards .CardSection .Card.CONECTADAS{
+    background-color: #FAF1F6;
+}
+
+main #entidades .Cards .CardSection .Card .quadradoBranco{
+    width: 258px;
+    height: 258px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+h3{
+    font-family: "DM Serif Text", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+main #entidades .Cards .CardSection .Card .Content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main #entidades .Cards .CardSection .Card .Content .Text{
+    max-width: 694px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+main #entidades .Cards .CardSection .Card .Content .icons{
+    display: flex;
+    gap: 16px;
+}
+
+main #entidades .Cards .CardSection .Card .Content .icons .ph-instagram-logo, 
+main #entidades .Cards .CardSection .Card .Content .icons .ph-globe, 
+main #entidades .Cards .CardSection .Card .Content .icons .ph-linkedin-logo{
+    font-size: 36px;
+}
+
+main #programacao .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+main #programacao .top p{
+    font-family: "DM Serif Text", sans-serif;
+    font-style: italic;
+}
+
+h4{
+    font-family: "DM Serif Text", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+main #programacao .grade {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 80px;
+}
+
+main #programacao .grade .minigrade{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+main #programacao .grade .conteudo{
+    border: 1px solid #200d0d;
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+main #programacao .grade .conteudo hr{
+    width: 100%;
+}
+
+main #programacao .grade .conteudo p a{
+    text-decoration:underline;
+}
+
+main #programacao .grade .conteudo .cronograma{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main #programacao .grade .conteudo .cronograma .comBolinha{
+    list-style: disc;
+}
+
+main #programacao .grade .conteudo .cronograma li span{
+    font-family: "DM Serif Text", sans-serif;
+}
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 0 80px 0;
+}
+
+footer span{
+    font-family: "DM Serif Text", sans-serif;
+
+}
